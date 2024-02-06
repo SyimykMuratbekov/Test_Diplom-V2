@@ -46,7 +46,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
@@ -54,16 +54,21 @@ nav a {
 }
 
 section {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 /* Обший контейнер */
+.rap{
+  background-color: #4b5044;
+}
 .container{
   max-width: 1260px;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  
 }
 .movie-actions a{
   padding: 8px 20px;
@@ -139,31 +144,43 @@ gap: 30px;
   width: 100%;
   height: 100%;
 }
-/* Слайдер  */
+/* Слайдер */
+.wrap{
+  background-color: #4b5044;
+}
+.wrap {
+  overflow: hidden;
+  margin: 0 auto;
+  border: 1px solid rgba(235, 6, 6, 0); 
+}
 .slider-container {
-    width: 60%;
-    overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .slide {
-    display: none;
+  display: none;
+  width: 335px;
+  height: 500px;
 }
 
 img {
-    width: 50%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* анимацию перехода между слайдами */
+.slide {
+  animation: fade 1.5s ease-in-out infinite;
 }
 
-/* Добавьте анимацию перехода между слайдами */
-.slide {
-    animation: fade 1.5s ease-in-out infinite;
-}
 @keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+      opacity: 0.4;
+  }
+  to {
+      opacity: 1;
+  }
 }
-/* Конец слайдера  */
+/* Конец слайдера*/
